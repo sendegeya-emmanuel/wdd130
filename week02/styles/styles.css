@@ -1,0 +1,44 @@
+cssbody {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0284c7;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+p {
+    padding: 0;
+    line-height: 1.6;
+}
+
+aside {
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #cbd5e1;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #1e293b;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 2px solid #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    color: #ffffff;
+}
