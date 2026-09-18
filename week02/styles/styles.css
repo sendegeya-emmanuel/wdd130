@@ -6,11 +6,16 @@ cssbody {
     padding: 0;
 }
 
-header {
+nav {
     background-color: #0284c7;
+    padding: 10px;
+}
+
+nav a {
     color: white;
-    text-align: center;
-    padding: 20px 0;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
 }
 
 main {
@@ -19,9 +24,16 @@ main {
     padding: 20px;
 }
 
-p {
-    padding: 0;
-    line-height: 1.6;
+h1 {
+    color: #0284c7;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 3px solid #cbd5e1;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 aside {
@@ -31,7 +43,16 @@ aside {
     padding: 15px;
     background-color: #ffffff;
     color: #1e293b;
-    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+    line-height: 1.6;
 }
 
 footer {
