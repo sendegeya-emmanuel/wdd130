@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+header {
+    background-color: #0284c7;
+    padding: 20px;
+}
+
 nav {
     background-color: #0284c7;
     padding: 10px;
@@ -14,8 +19,8 @@ nav {
 nav a {
     color: white;
     padding: 10px;
-    display: block;
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
@@ -26,6 +31,7 @@ main {
 
 h1 {
     color: #0284c7;
+    margin-bottom: 20px;
 }
 
 main img {
@@ -48,6 +54,8 @@ aside {
 aside img {
     width: 200px;
     height: auto;
+    display: block;
+    margin-top: 10px;
 }
 
 p {
