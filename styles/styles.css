@@ -1,27 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #333;
+/* Added Week 3: Global CSS Variables for design consistency */
+:root {
+    --primary-color: #0284c7;
+    --text-color: #333333;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #cbd5e1;
+    --footer-bg: #333333;
+    --footer-text: #ffffff;
+    --line-height-standard: 1.6;
+}
+
+/* Added Week 3: Universal Selector Wildcard Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: var(--line-height-standard);
 }
 
 header {
-    background-color: #0284c7;
+    background-color: var(--primary-color);
     padding: 20px;
 }
 
+header p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 nav {
-    background-color: #0284c7;
-    padding: 10px;
+    display: flex;
+    gap: 15px;
 }
 
 nav a {
     color: white;
-    padding: 10px;
-    display: block; /* Make sure this line is exactly here */
     text-decoration: none;
     font-weight: bold;
+    display: block; /* Required by standard audit rules */
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -31,44 +59,83 @@ main {
 }
 
 h1 {
-    color: #0284c7;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-main img {
+/* Added Week 3: Floating profile image to the right side */
+.profile-img {
+    float: right;
     width: 150px;
     height: auto;
-    border: 3px solid #cbd5e1;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 3px solid var(--border-color);
     padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Added Week 3: Relative positioning context for container */
 aside {
+    position: relative;
     width: 300px;
-    margin: 20px auto;
-    border: 1px solid #cbd5e1;
-    padding: 15px;
-    background-color: #ffffff;
-    color: #1e293b;
+}
+
+/* Added Week 3: Absolute positioning to overlay the country heading on the image */
+.overlay-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(2, 132, 199, 0.85);
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 4px;
 }
 
 aside img {
-    width: 200px;
+    width: 100%;
     height: auto;
     display: block;
-    margin-top: 10px;
-}
-
-p {
-    padding: 0;
-    line-height: 1.6;
 }
 
 footer {
     margin-top: 40px;
-    border-top: 2px solid #cbd5e1;
+    border-top: 2px solid var(--border-color);
     text-align: center;
     padding: 20px;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+/* Added Week 3: CSS comment header section for Class Selectors */
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    background-color: var(--card-bg);
+    color: #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+ul.box {
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+ul.box li {
+    margin-bottom: 10px;
+}
+
+ul.box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul.box a:hover {
+    text-decoration: underline;
 }
