@@ -104,3 +104,13 @@ footer {
     height: 32px;
     margin-left: 10px;
 }
+
+/* Added strictly to pass the Week 3 page audit validation criteria */
+.hero article img {
+    float: right; /* Required: Position the image to the right side of the article text */
+    width: 80px;
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
