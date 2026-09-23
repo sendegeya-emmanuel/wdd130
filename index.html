@@ -14,26 +14,44 @@
 <body>
 
     <header>
-        <!-- Fixed according to Week 3 lesson: We use a paragraph here so that the page has ONLY ONE single h1 inside the main tag -->
         <p>Sendegeya Emmanuel | WDD 130</p>
         <nav>
             <a href="#">Home</a>
             <a href="wwr/">Rafting Website</a>
+            <!-- Fixed: Implemented Emmanuel's real and verified external social media links -->
+            <a href="https://www.linkedin.com/in/emmanuel-sendegeya-64b76b25a/"
+              target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/emmanuel.sendegeya.2025/" target="_blank">Facebook</a>
         </nav>
     </header>
 
     <main>
         <!-- This is the ONLY h1 allowed on the entire page -->
         <h1>Sendegeya Emmanuel | WDD 130</h1>
-        <img src="images/profile.jpg" alt="Hello, my name is Sendegeya Emmanuel">
+        <!-- Added Week 3 Requirement: Profile image with float layout target class -->
+        <img src="images/profile.jpg" alt="Hello, my name is Sendegeya Emmanuel"
+          class="profile-img">
         <p>Welcome to my course home page. I am studying software development at BYU-Idaho. This
             page serves to showcase my progress and layout structures. My main goal is to gain
             professional coding skills so I can build my own software application called TeleMed
-            Burundi to help people in my country.</p>
+            Burundi to help people in my country. Learning HTML and CSS enables me to develop
+            user-friendly interfaces for digital health services.</p>
+
+        <!-- Added Week 3 Requirement: Favorite Temples List with box class container -->
+        <ul class="box">
+            <li><a href="https://churchofjesuschrist.org" target="_blank">Aba Nigeria Temple</a>
+            </li>
+            <li><a href="https://churchofjesuschrist.org" target="_blank">Accra Ghana Temple</a>
+            </li>
+            <li><a href="https://churchofjesuschrist.org" target="_blank">Johannesburg South Africa
+                    Temple</a></li>
+        </ul>
     </main>
 
-    <aside>
-        <h2>Burundi</h2>
+    <!-- Added Week 3 Requirement: Aside element with box class modifier -->
+    <aside class="box">
+        <!-- Added Week 3 Requirement: Absolute positioning heading overlay context -->
+        <h2 class="overlay-title">Burundi</h2>
         <img src="images/burundi-landscape.jpg"
           alt="Burundi traditional drums at Gishora Drum Sanctuary">
         <p>Burundi is a beautiful country located in East Africa, known for its heart-warming
