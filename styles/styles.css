@@ -19,9 +19,11 @@ nav {
 nav a {
     color: white;
     padding: 10px;
+    display: block; /* Fixed: Added strictly as required by the week 2 audit tool */
     text-decoration: none;
     font-weight: bold;
 }
+
 
 main {
     max-width: 800px;
