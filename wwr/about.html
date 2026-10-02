@@ -10,44 +10,72 @@
 </head>
 <body>
 
-    <header>
-        <!-- Rafting site logo and navigation section -->
-        <img src="images/logo.png" alt="Rafting Burundi Logo" width="100">
-        <nav>
+    <!-- SITE HEADER: Azaba ari CSS Grid -->
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Rafting Burundi Logo" class="logo-img">
+        </div>
+        <!-- NAVIGATION BAR: Azaba ari CSS Flexbox -->
+        <nav class="navigation-bar">
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="active">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <main>
+    <main class="about-main">
         <!-- Hero Section Components with Overlays -->
         <div class="hero">
-            <img src="images/hero-background.jpg" alt="Rafting team navigating intense river rapids">
+            <img src="images/hero-background.jpg" alt="Rafting team navigating intense river rapids" class="hero-bg-img">
             <h1>Rafting Burundi Adventure</h1>
-            <article>
-                <img src="images/happy-client.jpg" alt="Happy client smiling during an excursion">
+            <article class="hero-article">
+                <img src="images/happy-client.jpg" alt="Happy client smiling during an excursion" class="client-img">
                 <p>Our mission is to provide safe, thrilling, and unforgettable eco-tourism experiences on the magnificent rivers of East Africa. We empower youth and local communities through professional water safety standards.</p>
             </article>
         </div>
 
-        <!-- History Section Component -->
-        <section>
+        <!-- History Section Component (Twayipanze nka Grid) -->
+        <section class="history-section">
             <h2>History</h2>
-            <p>Founded in 2026, Rafting Burundi Adventure started with a deep passion for outdoor recreation. Over the years, we have expanded our training operations across the region, safely guiding thousands of international visitors through pristine natural landscapes while ensuring environmental preservation.</p>
+            <div class="history-grid">
+                <p>Founded in 2026, Rafting Burundi Adventure started with a deep passion for outdoor recreation. Over the years, we have expanded our training operations across the region, safely guiding thousands of international visitors through pristine natural landscapes while ensuring environmental preservation.</p>
+                <img src="images/history-river.jpg" alt="Historical rafting launch" class="history-img">
+            </div>
         </section>
 
-        <!-- Empty Placeholder Section for Future Milestones -->
-        <section>
-            <h2>Adventure Awaits You!</h2>
+        <!-- ADVENTURES SECTION: Amafoto 5 mwarimu yasabye (Koresha Figure Elements) -->
+        <section class="adventures-section">
+            <h2>Our Trip Adventures</h2>
+            <div class="adventures-grid">
+                <figure>
+                    <img src="images/adventure1.jpg" alt="Los Dientes del Diablo rapid">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure2.jpg" alt="Big Mallard rapid">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure3.jpg" alt="Half Day Adventure trip">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure4.jpg" alt="Full Day Thrill trip">
+                    <figcaption>Full Day Thrill</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure5.jpg" alt="Family Fun Float rapid">
+                    <figcaption>Family Fun Float</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <!-- FOOTER WITH SOCIAL LINKS TO THE RIGHT -->
+    <footer class="site-footer">
         <p>©2026 🇧🇮 Rafting Burundi Adventure 🇧🇮 Emmanuel Sendegeya</p>
         <nav class="socialmedia">
-            <!-- Emmanuel's real and verified personal social profiles -->
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.svg" alt="Facebook Icon">
             </a>
