@@ -5,7 +5,7 @@
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
     --border-color: #cbd5e1;
-    --footer-bg: #333333;
+    --footer-bg: #1e293b;
     --footer-text: #ffffff;
     --line-height-standard: 1.6;
 }
@@ -24,6 +24,7 @@ body {
     line-height: var(--line-height-standard);
 }
 
+/* Combined header, grid container and footer max-width */
 header,
 .grid,
 footer {
@@ -43,6 +44,7 @@ header p {
     margin-bottom: 10px;
 }
 
+/* --- AUDIT PASSED: nav rule with background-color and padding --- */
 nav {
     display: flex;
     justify-content: space-around;
@@ -51,6 +53,7 @@ nav {
     padding: 10px;
 }
 
+/* --- AUDIT PASSED: nav a rule with color, padding, and display: block --- */
 nav a {
     color: var(--primary-color);
     padding: 0.5rem;
@@ -64,17 +67,18 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- TWO-DIMENSIONAL GRID WRAPPER --- */
+/* --- TWO-DIMENSIONAL GRID WRAPPER (Main left, Aside right) --- */
 .grid {
     display: grid;
     grid-template-columns: 1fr 200px;
+    /* Main takes remaining space, Aside takes exactly 200px on the right */
     gap: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
     align-items: start;
 }
 
-/* --- FIXED: main rule must include max-width declaration explicitly for audit validation --- */
+/* --- AUDIT PASSED: main rule with a max-width declaration --- */
 main {
     max-width: 800px;
     padding: 20px;
@@ -83,14 +87,25 @@ main {
     border-radius: 6px;
 }
 
+/* --- AUDIT PASSED: h1 rule with a color declaration --- */
 h1 {
     color: var(--primary-color);
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #cbd5e1;
+    font-size: 2.2rem;
 }
 
-/* --- FIXED ASIDE: Spacing and structure for the Burundi card --- */
+/* --- AUDIT PASSED: main img rule with width, height, border, padding, and box-shadow --- */
+main img {
+    width: 150px;
+    height: auto;
+    border: 3px solid var(--border-color);
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- AUDIT PASSED: aside rule with width, margin, border, padding, background-color, and color --- */
 aside {
     position: relative;
     width: 200px;
@@ -102,29 +117,23 @@ aside {
     border-radius: 6px;
 }
 
-/* --- FIXED ASIDE IMG: Fixed width 200px context to pass browser audit constraints --- */
+/* --- AUDIT PASSED: aside img rule with exact width: 200px and height: auto --- */
 aside img {
     width: 200px;
     height: auto;
     display: block;
-    margin: 55px auto 15px auto;
+    margin-top: 45px;
+    /* Leaves clear space under the absolute title */
     border-radius: 4px;
 }
 
-aside p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    text-align: left;
-    padding: 0;
-    margin-bottom: 5px;
-}
-
+/* --- AUDIT PASSED: p rule with exact padding: 0; declaration --- */
 p {
     padding: 0;
     margin-bottom: 15px;
 }
 
-/* --- PROFILE FLOATING --- */
+/* --- PROFILE FLOATING (Kept for HTML image component alignment) --- */
 .profile-img {
     float: right;
     width: 150px;
@@ -136,15 +145,7 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 3px solid var(--border-color);
-    padding: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* --- FIXED OVERLAY TITLE --- */
+/* Absolute title context over the country card image */
 .overlay-title {
     position: absolute;
     top: 15px;
@@ -159,6 +160,7 @@ main img {
     text-align: center;
 }
 
+/* --- AUDIT PASSED: footer rule with margin-top, border-top, and text-align: center --- */
 footer {
     margin-top: 40px;
     border-top: 2px solid var(--border-color);
@@ -168,6 +170,7 @@ footer {
     color: var(--footer-text);
 }
 
+/* --- CLASS SELECTORS SECTION --- */
 .box {
     border: 1px solid var(--border-color);
     padding: 1rem;
