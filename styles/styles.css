@@ -64,11 +64,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- TWO-DIMENSIONAL GRID WRAPPER (Main Left, Aside Right) --- */
+/* --- TWO-DIMENSIONAL GRID WRAPPER --- */
 .grid {
     display: grid;
     grid-template-columns: 1fr 200px;
-    /* Main takes remaining space, Aside takes exactly 200px on the right */
+    /* Sehemu kuu upande wa kushoto, Burundi upande wa kulia kulia (200px) */
     gap: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -90,7 +90,7 @@ h1 {
     border-bottom: 2px solid #cbd5e1;
 }
 
-/* --- ASIDE: Fixed 200px width on the right column to pass browser audit constraints --- */
+/* --- FIXED ASIDE: Spacing and structure for the Burundi card --- */
 aside {
     position: relative;
     width: 200px;
@@ -102,14 +102,23 @@ aside {
     border-radius: 6px;
 }
 
-/* --- ASIDE IMG: Exact 200px width matching audit tool criteria --- */
+/* --- FIXED ASIDE IMG: Increased margin-top to separate image from the absolute title --- */
 aside img {
-    width: 200px;
+    width: 170px;
+    /* Imepunguzwa kidogo ili iingie vizuri ndani ya padding ya aside */
     height: auto;
     display: block;
-    margin-top: 45px;
-    /* Creates clean space directly below absolute overlay title */
+    margin: 55px auto 15px auto;
+    /* 55px ya juu inasukuma picha chini ya lile jina la "Burundi" */
     border-radius: 4px;
+}
+
+aside p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 5px;
 }
 
 p {
@@ -117,7 +126,7 @@ p {
     margin-bottom: 15px;
 }
 
-/* --- PROFILE FLOATING: Floating profile image to the right side inside main section --- */
+/* --- PROFILE FLOATING --- */
 .profile-img {
     float: right;
     width: 150px;
@@ -137,14 +146,14 @@ main img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --- ABSOLUTE OVERLAY TITLE --- */
+/* --- FIXED OVERLAY TITLE: Styled perfectly at the top of the aside card --- */
 .overlay-title {
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: rgba(2, 132, 199, 0.9);
+    background-color: rgba(2, 132, 199, 0.95);
     color: white;
-    padding: 5px 10px;
+    padding: 8px 10px;
     font-size: 1.1rem;
     border-radius: 4px;
     z-index: 5;
