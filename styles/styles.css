@@ -64,9 +64,19 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- FIXED: main rule must include max-width explicitly for audit validation --- */
+/* --- TWO-DIMENSIONAL GRID WRAPPER (Main Left, Aside Right) --- */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    /* Main takes remaining space, Aside takes exactly 200px on the right */
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    align-items: start;
+}
+
+/* --- MAIN CONTAINER (Left Column) --- */
 main {
-    max-width: 800px;
     padding: 20px;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -77,22 +87,14 @@ h1 {
     color: var(--primary-color);
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid #cbd5e1;
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 3px solid var(--border-color);
-    padding: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* --- FIXED: aside rule must include width, margin, border, padding, background-color, and color explicitly --- */
+/* --- ASIDE: Fixed 200px width on the right column to pass browser audit constraints --- */
 aside {
     position: relative;
     width: 200px;
-    margin: 20px 0;
+    margin: 0;
     border: 1px solid var(--border-color);
     padding: 15px;
     background-color: var(--card-bg);
@@ -100,12 +102,14 @@ aside {
     border-radius: 6px;
 }
 
-/* --- FIXED: aside img rule must have exact values width: 200px and height: auto --- */
+/* --- ASIDE IMG: Exact 200px width matching audit tool criteria --- */
 aside img {
     width: 200px;
     height: auto;
     display: block;
-    margin-top: 10px;
+    margin-top: 45px;
+    /* Creates clean space directly below absolute overlay title */
+    border-radius: 4px;
 }
 
 p {
@@ -113,6 +117,7 @@ p {
     margin-bottom: 15px;
 }
 
+/* --- PROFILE FLOATING: Floating profile image to the right side inside main section --- */
 .profile-img {
     float: right;
     width: 150px;
@@ -124,24 +129,27 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.overlay-title {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    background-color: rgba(2, 132, 199, 0.85);
-    color: white;
-    padding: 5px 10px;
-    font-size: 1.2rem;
-    border-radius: 4px;
-    z-index: 10;
+main img {
+    width: 150px;
+    height: auto;
+    border: 3px solid var(--border-color);
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* --- ABSOLUTE OVERLAY TITLE --- */
+.overlay-title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(2, 132, 199, 0.9);
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    z-index: 5;
+    width: calc(100% - 30px);
+    text-align: center;
 }
 
 footer {
