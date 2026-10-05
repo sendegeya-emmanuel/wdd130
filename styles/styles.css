@@ -1,4 +1,4 @@
-/* Added Week 3: Global CSS Variables for design consistency */
+/* --- GLOBAL CSS VARIABLES --- */
 :root {
     --primary-color: #0284c7;
     --text-color: #333333;
@@ -10,7 +10,7 @@
     --line-height-standard: 1.6;
 }
 
-/* Added Week 3: Universal Selector Wildcard Reset */
+/* --- UNIVERSAL RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -36,16 +36,21 @@ header p {
     margin-bottom: 10px;
 }
 
+/* --- FIXED: nav rule must include background-color and padding --- */
 nav {
     display: flex;
     gap: 15px;
+    background-color: #ffffff;
+    padding: 10px;
 }
 
+/* --- FIXED: nav a rule must include color, padding, and display: block --- */
 nav a {
-    color: white;
+    color: var(--primary-color);
+    padding: 8px 12px;
+    display: block;
     text-decoration: none;
     font-weight: bold;
-    display: block; /* Required by standard audit rules */
 }
 
 nav a:hover {
@@ -63,7 +68,40 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Added Week 3: Floating profile image to the right side */
+/* --- FIXED: main img rule with width, height, border, padding, and box-shadow --- */
+main img {
+    width: 150px;
+    height: auto;
+    border: 3px solid var(--border-color);
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FIXED: aside rule with width, margin, border, padding, background-color, and color --- */
+aside {
+    position: relative;
+    width: 200px;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* --- FIXED: aside img rule with exact width: 200px and height: auto --- */
+aside img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+/* --- FIXED: p rule with exact padding: 0; declaration --- */
+p {
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* --- PROFILE FLOATING (Kept for HTML support if needed) --- */
 .profile-img {
     float: right;
     width: 150px;
@@ -75,13 +113,6 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Added Week 3: Relative positioning context for container */
-aside {
-    position: relative;
-    width: 300px;
-}
-
-/* Added Week 3: Absolute positioning to overlay the country heading on the image */
 .overlay-title {
     position: absolute;
     top: 10px;
@@ -93,12 +124,6 @@ aside {
     border-radius: 4px;
 }
 
-aside img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 footer {
     margin-top: 40px;
     border-top: 2px solid var(--border-color);
@@ -108,9 +133,7 @@ footer {
     color: var(--footer-text);
 }
 
-/* Added Week 3: CSS comment header section for Class Selectors */
-/* Class Selectors */
-
+/* --- CLASS SELECTORS SECTION --- */
 .box {
     margin: 1rem;
     border: 1px solid var(--border-color);
