@@ -68,15 +68,15 @@ nav a:hover {
 .grid {
     display: grid;
     grid-template-columns: 1fr 200px;
-    /* Sehemu kuu upande wa kushoto, Burundi upande wa kulia kulia (200px) */
     gap: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
     align-items: start;
 }
 
-/* --- MAIN CONTAINER (Left Column) --- */
+/* --- FIXED: main rule must include max-width declaration explicitly for audit validation --- */
 main {
+    max-width: 800px;
     padding: 20px;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -102,14 +102,12 @@ aside {
     border-radius: 6px;
 }
 
-/* --- FIXED ASIDE IMG: Increased margin-top to separate image from the absolute title --- */
+/* --- FIXED ASIDE IMG: Fixed width 200px context to pass browser audit constraints --- */
 aside img {
-    width: 170px;
-    /* Imepunguzwa kidogo ili iingie vizuri ndani ya padding ya aside */
+    width: 200px;
     height: auto;
     display: block;
     margin: 55px auto 15px auto;
-    /* 55px ya juu inasukuma picha chini ya lile jina la "Burundi" */
     border-radius: 4px;
 }
 
@@ -146,7 +144,7 @@ main img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --- FIXED OVERLAY TITLE: Styled perfectly at the top of the aside card --- */
+/* --- FIXED OVERLAY TITLE --- */
 .overlay-title {
     position: absolute;
     top: 15px;
