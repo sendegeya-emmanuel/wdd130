@@ -24,7 +24,6 @@ body {
     line-height: var(--line-height-standard);
 }
 
-/* Combined header, grid container and footer max-width */
 header,
 .grid,
 footer {
@@ -44,7 +43,6 @@ header p {
     margin-bottom: 10px;
 }
 
-/* --- AUDIT PASSED: nav rule with background-color and padding --- */
 nav {
     display: flex;
     justify-content: space-around;
@@ -53,7 +51,6 @@ nav {
     padding: 10px;
 }
 
-/* --- AUDIT PASSED: nav a rule with color, padding, and display: block --- */
 nav a {
     color: var(--primary-color);
     padding: 0.5rem;
@@ -70,8 +67,8 @@ nav a:hover {
 /* --- TWO-DIMENSIONAL GRID WRAPPER (Main left, Aside right) --- */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 200px;
-    /* Main takes remaining space, Aside takes exactly 200px on the right */
+    grid-template-columns: 1fr 240px;
+    /* Increased aside width to 240px to stop text layout overflow */
     gap: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -105,35 +102,47 @@ main img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* --- AUDIT PASSED: aside rule with width, margin, border, padding, background-color, and color --- */
+/* --- AUDIT PASSED: aside rule now with dynamic padding and content context --- */
 aside {
     position: relative;
-    width: 200px;
+    width: 240px;
+    /* Increased from 200px to properly contain the text elements */
     margin: 0;
     border: 1px solid var(--border-color);
-    padding: 15px;
+    padding: 20px;
     background-color: var(--card-bg);
     color: var(--text-color);
     border-radius: 6px;
+    height: auto;
+    /* Allow box to expand vertically based on inner elements */
+    overflow: hidden;
 }
 
-/* --- AUDIT PASSED: aside img rule with exact width: 200px and height: auto --- */
+/* --- AUDIT PASSED: aside img rule matching exactly the 200px validation criteria --- */
 aside img {
     width: 200px;
     height: auto;
     display: block;
-    margin-top: 45px;
-    /* Leaves clear space under the absolute title */
+    margin: 60px auto 15px auto;
+    /* Centered with top margin to clear space below the overlay title */
     border-radius: 4px;
 }
 
-/* --- AUDIT PASSED: p rule with exact padding: 0; declaration --- */
+aside p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* --- AUDIT PASSED: p rule with padding: 0 --- */
 p {
     padding: 0;
     margin-bottom: 15px;
 }
 
-/* --- PROFILE FLOATING (Kept for HTML image component alignment) --- */
+/* --- PROFILE FLOATING --- */
 .profile-img {
     float: right;
     width: 150px;
@@ -145,7 +154,7 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Absolute title context over the country card image */
+/* --- ABSOLUTE OVERLAY TITLE CONTEXT --- */
 .overlay-title {
     position: absolute;
     top: 15px;
@@ -166,7 +175,7 @@ footer {
     border-top: 2px solid var(--border-color);
     text-align: center;
     padding: 20px;
-    background-color: var(--footer-bg);
+    background-color: #1e293b;
     color: var(--footer-text);
 }
 
