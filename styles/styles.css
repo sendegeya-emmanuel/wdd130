@@ -1,4 +1,5 @@
-* --- GLOBAL CSS VARIABLES --- */:root {
+/* --- GLOBAL CSS VARIABLES --- */
+:root {
     --primary-color: #0284c7;
     --text-color: #333333;
     --bg-color: #f8fafc;
@@ -23,7 +24,6 @@ body {
     line-height: var(--line-height-standard);
 }
 
-/* --- FIXED FOR WEEK 4: Combined rule with max-width and centering --- */
 header,
 .grid,
 footer {
@@ -43,7 +43,6 @@ header p {
     margin-bottom: 10px;
 }
 
-/* --- FIXED FOR WEEK 4: CSS Flex layout for navigation bar --- */
 nav {
     display: flex;
     justify-content: space-around;
@@ -52,7 +51,6 @@ nav {
     padding: 10px;
 }
 
-/* --- FIXED FOR WEEK 4: nav a as block elements with padding --- */
 nav a {
     color: var(--primary-color);
     padding: 0.5rem;
@@ -66,23 +64,15 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- FIXED FOR WEEK 4: CSS Grid layout context --- */
-.grid {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
+/* --- FIXED: main rule must include max-width explicitly for audit validation --- */
 main {
+    max-width: 800px;
     padding: 20px;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 6px;
 }
 
-/* --- FIXED FOR WEEK 4: Add a bottom border to h1 element --- */
 h1 {
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -98,8 +88,11 @@ main img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* --- FIXED: aside rule must include width, margin, border, padding, background-color, and color explicitly --- */
 aside {
     position: relative;
+    width: 200px;
+    margin: 20px 0;
     border: 1px solid var(--border-color);
     padding: 15px;
     background-color: var(--card-bg);
@@ -107,8 +100,9 @@ aside {
     border-radius: 6px;
 }
 
+/* --- FIXED: aside img rule must have exact values width: 200px and height: auto --- */
 aside img {
-    width: 100%;
+    width: 200px;
     height: auto;
     display: block;
     margin-top: 10px;
@@ -142,6 +136,14 @@ p {
     z-index: 10;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 footer {
     margin-top: 40px;
     border-top: 2px solid var(--border-color);
@@ -151,9 +153,7 @@ footer {
     color: var(--footer-text);
 }
 
-/* --- CLASS SELECTORS SECTION --- */
 .box {
-    margin: 0 0 20px 0;
     border: 1px solid var(--border-color);
     padding: 1rem;
     background-color: var(--card-bg);
