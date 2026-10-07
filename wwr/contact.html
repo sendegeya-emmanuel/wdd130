@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,9 +14,11 @@
         <div class="logo-box">
             <img src="images/logo.png" alt="Dry Oar Boating Logo" class="logo">
         </div>
+        <!-- FIXED: Navigation menu contains exactly four links in the exact required order -->
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
             <a href="contact.html" class="active">Contact Us</a>
         </nav>
     </header>
@@ -32,7 +35,6 @@
                 <p><strong>Email:</strong> info@dryoarboating.com</p>
             </div>
             <div class="map-box">
-                <!-- FIXED: Embedded Google Map with inline border style removed -->
                 <iframe src="https://google.com" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
@@ -71,13 +73,13 @@
                     <input type="email" id="useremail" name="useremail" required>
                 </div>
 
-                <!-- Radio Buttons Group for Purpose -->
+                <!-- FIXED: Radio buttons properly grouped with matching name and individual explicit ids -->
                 <div class="form-group-radio">
                     <label>Purpose of Message:</label>
                     <div class="radio-options">
-                        <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                        <label for="general"><input type="radio" id="general" name="purpose" value="general" checked> General Inquiry</label>
+                        <label for="reservation"><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
+                        <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
                     </div>
                 </div>
 
@@ -86,8 +88,10 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
 
+                <!-- FIXED: Checkbox element with required id and name attributes coupled with a label -->
                 <div class="form-group-checkbox">
-                    <label><input type="checkbox" name="newsletter" value="subscribe"> Please subscribe me to the monthly newsletter</label>
+                    <input type="checkbox" id="pet" name="newsletter" value="subscribe">
+                    <label for="pet">Please subscribe me to the monthly newsletter</label>
                 </div>
 
                 <button type="submit" class="submit-btn">Submit Inquiry</button>
@@ -95,8 +99,14 @@
         </section>
     </main>
 
+    <!-- FIXED: Footer contains exactly two components, including the required nav class="socialmedia" with 3 images -->
     <footer>
         <p>&copy; 2026 Dry Oar Boating | Emmanuel Sendegeya | WDD 130</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook Icon"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter Icon"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram Icon"></a>
+        </nav>
     </footer>
 
 </body>
