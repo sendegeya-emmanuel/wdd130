@@ -1,0 +1,118 @@
+/* --- UNIVERSAL SELECTOR RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- GLOBAL BODY DESIGN --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+header, form, footer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    color: #64748b;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    text-align: center;
+    color: #0284c7;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+/* --- SINGLE COLUMN FORM LAYOUT --- */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- INDIVIDUAL QUIZ ITEMS --- */
+.quiz-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 1.05rem;
+}
+
+/* --- UNIFORM INPUT CONTROL STYLES --- */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #f8fafc;
+    color: #334155;
+    transition: border-color 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #0284c7;
+    background-color: #ffffff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* --- SUBMIT BUTTON DESIGN --- */
+button {
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0369a1;
+}
+
+/* --- FOOTER DESIGN --- */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #cbd5e1;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
