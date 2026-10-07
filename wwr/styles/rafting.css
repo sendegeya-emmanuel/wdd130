@@ -223,7 +223,7 @@ footer {
 }
 
 .map-box iframe {
-    width: 100%; /* This is the correct, valid modern way to apply percentage widths */
+    width: 100%; 
     border: none;
     border-radius: 6px;
 }
