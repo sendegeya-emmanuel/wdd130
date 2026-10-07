@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dry Oar Boating</title>
+    <meta name="description" content="Contact Dry Oar Boating for general inquiries, rafting reservations, and website suggestions. Locate our office and meet our team.">
+    <meta name="author" content="Emmanuel Sendegeya">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.png" alt="Dry Oar Boating Logo" class="logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <h1>Contact Dry Oar Boating</h1>
+
+        <!-- Section 1: Company Information & Map -->
+        <section class="company-info">
+            <div class="info-text">
+                <h2>Our Office</h2>
+                <p><strong>Address:</strong> 123 Rafting Way, Bujumbura, Burundi</p>
+                <p><strong>Phone:</strong> +257 22 22 22 22</p>
+                <p><strong>Email:</strong> info@dryoarboating.com</p>
+            </div>
+            <div class="map-box">
+                <!-- FIXED: Embedded Google Map with inline border style removed -->
+                <iframe src="https://google.com" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Section 2: Employee Profiles -->
+        <section class="employee-section">
+            <h2>Meet Our Team</h2>
+            <div class="employee-grid">
+                <figure class="employee-card">
+                    <img src="images/employee1.jpg" alt="Jean-Pierre, Managing Director">
+                    <figcaption><strong>Jean-Pierre</strong> <br> Managing Director</figcaption>
+                </figure>
+                <figure class="employee-card">
+                    <img src="images/employee2.jpg" alt="Aline, Senior River Guide">
+                    <figcaption><strong>Aline</strong> <br> Senior River Guide</figcaption>
+                </figure>
+                <figure class="employee-card">
+                    <img src="images/employee3.jpg" alt="Fabrice, Safety Coordinator">
+                    <figcaption><strong>Fabrice</strong> <br> Safety Coordinator</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section 3: Contact Form -->
+        <section class="form-section">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post" class="rafting-form">
+                
+                <div class="form-group">
+                    <label for="username">Full Name:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="useremail">Email Address:</label>
+                    <input type="email" id="useremail" name="useremail" required>
+                </div>
+
+                <!-- Radio Buttons Group for Purpose -->
+                <div class="form-group-radio">
+                    <label>Purpose of Message:</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
+                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group-checkbox">
+                    <label><input type="checkbox" name="newsletter" value="subscribe"> Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dry Oar Boating | Emmanuel Sendegeya | WDD 130</p>
+    </footer>
+
+</body>
+</html>

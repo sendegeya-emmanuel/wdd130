@@ -1,3 +1,4 @@
+/* --- GLOBAL CSS VARIABLES --- */
 :root {
     --heading-font: 'Georgia', serif;
     --body-font: 'Arial', sans-serif;
@@ -6,6 +7,7 @@
     --card-bg: rgba(255, 255, 255, 0.9);
 }
 
+/* --- UNIVERSAL RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +61,7 @@ nav, p, section, article {
     padding: 8px;
 }
 
+/* --- HERO SECTION --- */
 .hero {
     position: relative;
     max-width: 840px;
@@ -101,6 +104,7 @@ nav, p, section, article {
     border-radius: 4px;
 }
 
+/* --- HISTORY SECTION --- */
 .history-section {
     max-width: 840px;
     margin: 30px auto;
@@ -119,6 +123,7 @@ nav, p, section, article {
     border-radius: 6px;
 }
 
+/* --- ADVENTURES SECTION --- */
 .adventures-section {
     max-width: 840px;
     margin: 40px auto;
@@ -153,6 +158,7 @@ nav, p, section, article {
     color: var(--primary-color);
 }
 
+/* --- FOOTER LAYOUT --- */
 footer {
     display: flex;
     justify-content: space-between; 
@@ -176,4 +182,156 @@ footer {
     width: 32px;
     height: 32px;
     margin-left: 15px;
+}
+
+/* ==========================================
+   ADDED FOR WEEK 5: CONTACT US PAGE STYLING
+   ========================================== */
+.contact-main {
+    max-width: 840px; /* Aligned with header/footer width for design uniformity */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-main h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-main h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+/* Section 1: Company Info Grid Layout */
+.company-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.info-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-left: 0; /* Override generic margin spacing */
+}
+
+.map-box iframe {
+    border: none;
+    border-radius: 6px;
+}
+
+/* Section 2: Employee Grid Layout */
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.employee-card {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.employee-card img {
+    width: 100%;
+    max-width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+/* Section 3: Rafting Form Single Column Layout */
+.form-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 40px;
+}
+
+.rafting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+}
+
+/* Radios and Checkbox styling alignment */
+.form-group-radio label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-options label, 
+.form-group-checkbox label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0; /* Balanced padding inside grid rows */
+}
+
+.radio-options input, 
+.form-group-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+/* Submit Button styling */
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--body-font);
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0369a1;
 }
