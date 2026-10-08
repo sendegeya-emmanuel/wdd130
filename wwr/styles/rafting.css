@@ -336,3 +336,78 @@ footer {
 .submit-btn:hover {
     background-color: #0369a1;
 }
+
+/* --- NEWSLETTER SIGNUP FORM LAYOUT (WEEK 6) --- */
+.newsletter-box {
+    background-color: #eeeeee;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 30px 16px;
+    text-align: center;
+}
+
+.newsletter-box h2 {
+    color: var(--accent1-color);
+    margin-bottom: 10px;
+}
+
+.newsletter-box p {
+    margin-bottom: 25px;
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.newsletter-form label {
+    font-weight: bold;
+    font-family: Roboto, Arial, sans-serif;
+    color: var(--accent1-color);
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.newsletter-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Visually distinguishable signup button */
+.signup-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Roboto, Arial, sans-serif;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background-color: #0369a1;
+}
