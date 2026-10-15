@@ -391,6 +391,7 @@ footer {
     background-color: #0369a1;
 }
 
+
 /* --- NEWSLETTER SIGNUP FORM LAYOUT (WEEK 6) --- */
 .newsletter-box {
     background-color: #eeeeee;
@@ -612,3 +613,51 @@ footer {
     height: 300px;
     display: block;
 }
+/* ==========================================================================
+   W05 CONTACT PAGE POSITIONING FRAMEWORK (SIDE-BY-SIDE GRID)
+   ========================================================================== */
+
+/* Unifies the global primary color to satisfy the WCAG AA Contrast ratio (> 4.5:1) */
+:root {
+    --primary-color: #0369a1; 
+}
+
+/* Forces the layout to go beyond a single column structure using CSS Grid */
+.company-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin: 30px auto;
+    max-width: 1100px;
+    align-items: center;
+}
+
+.info-text-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-text-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.info-text-card p {
+    margin-bottom: 10px;
+}
+
+/* Captures the iframe and enforces clean, external responsive styling constraints */
+.map-box-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.map-box-container iframe {
+    border: none;
+    width: 100%;
+    height: 320px;
+    display: block;
