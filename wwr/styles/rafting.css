@@ -586,3 +586,21 @@ footer {
     font-size: 0.9rem;
     color: #cbd5e1;
 }
+
+/* ==========================================================================
+   FIXED COLOR CONTRAST FRAMEWORK (WCAG AA COMPLIANT) 
+   ========================================================================== */
+:root {
+    /* Enhanced from rgb(2 132 199) to rgb(3 105 161) to increase contrast ratio above 4.5:1 */
+    --primary-color: #0369a1; 
+    --accent1-color: #1e293b;
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* FIXED INLINE STYLE MIGRATION FOR IFRAME MAP */
+.map-box iframe {
+    border: none;
+    width: 100%;
+    height: 300px;
+    display: block;
+}
