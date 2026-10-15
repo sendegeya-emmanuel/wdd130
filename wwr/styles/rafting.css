@@ -2,7 +2,7 @@
 :root {
     --heading-font: 'Georgia', serif;
     --body-font: 'Arial', sans-serif;
-    --primary-color: #0284c7;
+    --primary-color: #0369a1;
     --accent1-color: #1e293b;
     --card-bg: rgba(255, 255, 255, 0.9);
 }
@@ -598,6 +598,14 @@ footer {
 }
 
 /* FIXED INLINE STYLE MIGRATION FOR IFRAME MAP */
+.map-box iframe {
+    border: none;
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+
+/* FIXED STRUCTURAL OVERRIDE FOR THE GOOGLE MAP IFRAME CONTAINER */
 .map-box iframe {
     border: none;
     width: 100%;
